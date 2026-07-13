@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyc
+
+# Virtual environments
+backend/venv/
+backend/testenv/
+venv/
+testenv/
+
+# Environment variables
+.env
+backend/.env
+frontend/.env
+
+# LangChain / Chroma
+chroma/
+chroma_db/
+*.sqlite3
+
+# Node
+frontend/node_modules/
+frontend/dist/
+node_modules/
+
+# Vite
+.vite/
+
+# Logs
+*.log
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
