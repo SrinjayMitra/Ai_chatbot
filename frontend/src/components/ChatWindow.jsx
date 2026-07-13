@@ -157,7 +157,7 @@ export default function ChatWindow() {
             <br />
             Example:
             <br />
-            "something to stop sewer backflow"
+            "something to stop sewage backflow"
           </div>
         )}
 
