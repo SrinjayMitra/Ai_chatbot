@@ -5,21 +5,46 @@ export default function Message({ role, text, match }) {
 
   if (!isUser && match) {
     return (
-      <ProductCard
-        name={match.productName}
-        url={match.productUrl}
-        category={match.category}
-        reason={match.reason}
-      />
+      <div
+        style={{
+          marginBottom: 18,
+        }}
+      >
+        <ProductCard
+          name={match.productName}
+          url={match.productUrl}
+          category={match.category}
+          reason={match.reason}
+        />
+      </div>
     );
   }
 
   return (
-    <div style={{ padding: "10px 0", fontSize: 15, lineHeight: 1.5 }}>
-      <span style={{ color: "#999", marginRight: 8 }}>
-        {isUser ? "You" : "Bot"}
-      </span>
-      <span style={{ color: isUser ? "#000" : "#555" }}>{text}</span>
+    <div
+      style={{
+        display: "flex",
+        justifyContent: isUser ? "flex-end" : "flex-start",
+        marginBottom: 14,
+      }}
+    >
+      <div
+        style={{
+          maxWidth: "75%",
+          padding: "12px 16px",
+          borderRadius: 18,
+          background: isUser ? "#111" : "#ffffff",
+
+          color: isUser ? "#fff" : "#333",
+
+          border: isUser ? "none" : "1px solid #e5e7eb",
+
+          fontSize: 15,
+          lineHeight: 1.5,
+        }}
+      >
+        {text}
+      </div>
     </div>
   );
 }
